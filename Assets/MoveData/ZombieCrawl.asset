@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c0ee01a69b9bf41908e3d208f66ac8, type: 3}
+  m_Name: ZombieCrawl
+  m_EditorClassIdentifier: 
+  maxSpeed: 3
+  minSpeed: 1.5
+  maxForce: 4
+  turnRate: 180
+  orientToMovement: 1
