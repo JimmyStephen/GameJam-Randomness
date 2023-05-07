@@ -35,6 +35,6 @@ public class GameManager : Singleton<GameManager>
     public void UpdateTotalZombies(int Update)
     {
         TotalZombies += Update;
-        Debug.Log($"Total Zombies: {TotalZombies}");
+        //Debug.Log($"Total Zombies: {TotalZombies}/{MaxZombies}");
     }
 }

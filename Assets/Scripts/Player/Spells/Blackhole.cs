@@ -21,8 +21,8 @@ public class Blackhole : Spell
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.TryGetComponent<StateAgent>(out var Zombie))
-            SpellDamage.Trigger(Zombie);
+        //if (other.TryGetComponent<StateAgent>(out var Zombie))
+        //    SpellDamage.Trigger(Zombie);
     }
 
     private void OnDestroy()

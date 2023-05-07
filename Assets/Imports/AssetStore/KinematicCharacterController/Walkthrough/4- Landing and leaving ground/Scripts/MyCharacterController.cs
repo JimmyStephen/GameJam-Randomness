@@ -57,6 +57,7 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
         [SerializeField] public Resource Mana;
         [SerializeField] List<GameObject> Spells;
         [SerializeField] List<GameObject> SpellLocations;
+        [SerializeField, Tooltip("The speed multiplier for sprinting")] float SprintSpeed = 2;
         
         [HideInInspector] public float animationTimer = 0;
         [SerializeField] Animator animator;
@@ -90,6 +91,7 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
         }
         void UpdateAnimator()
         {
+            Debug.Log("Speed: " + Motor.Velocity.magnitude);
             animator.SetFloat("Speed", Motor.Velocity.magnitude);
             animator.SetBool("Dead", (Health.GetCurrent() <= 0));
         }
@@ -213,7 +215,8 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
                 // Calculate target velocity
                 Vector3 inputRight = Vector3.Cross(_moveInputVector, Motor.CharacterUp);
                 Vector3 reorientedInput = Vector3.Cross(Motor.GroundingStatus.GroundNormal, inputRight).normalized * _moveInputVector.magnitude;
-                targetMovementVelocity = reorientedInput * MaxStableMoveSpeed;
+                targetMovementVelocity = reorientedInput * MaxStableMoveSpeed * (Input.GetKey(KeyCode.LeftShift) ? SprintSpeed : 1);
+
 
                 // Smooth movement Velocity
                 currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity, 1 - Mathf.Exp(-StableMovementSharpness * deltaTime));

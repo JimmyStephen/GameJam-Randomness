@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9011559549605865867
 Transform:
   m_ObjectHideFlags: 0
@@ -50,7 +50,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5555781930755651037}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbdf6832981e4af4bb14f29a277a2d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GRAVITY_FORCE: 1.5
+  GRAVITY_FORCE: 5
 --- !u!1 &6324448586897879753
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 6324448586897879759}
   - component: {fileID: 6324448586897879758}
   - component: {fileID: 5182694692542420094}
-  - component: {fileID: -6576038744859827466}
   - component: {fileID: -3312232445505870900}
   m_Layer: 0
   m_Name: Blackhole
@@ -226,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpellCost: 75
-  SpellDuration: 10
+  SpellDuration: 8
   SpellDelay: 2
   SpellDamage: {fileID: -3312232445505870900}
   SpellCooldown: 15
@@ -234,24 +233,8 @@ MonoBehaviour:
   AnimationDuration: 2.7
   CastSpellKey: 325
   Owner: {fileID: 0}
-  ExpansionRate: 3
+  ExpansionRate: 2.5
   createOnDestroy: {fileID: 0}
---- !u!54 &-6576038744859827466
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6324448586897879753}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &-3312232445505870900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,10 +247,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27f2d4a2a471384f91ea2b5063b3453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 15
   MultiTarget: 1
   DOT: 1
-  Duration: 100
+  Duration: 1000
 --- !u!1001 &1637065454892810705
 PrefabInstance:
   m_ObjectHideFlags: 0

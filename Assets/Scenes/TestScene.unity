@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015f39bcd4299394e8ac411e980d2f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxZombies: 100
+  MaxZombies: 50
 --- !u!4 &256881316
 Transform:
   m_ObjectHideFlags: 0
@@ -1284,6 +1284,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5958605958116657537, guid: 712ef24aa18682e4f943010005dec92b, type: 3}
+      propertyPath: SprintSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7641555320107600256, guid: 712ef24aa18682e4f943010005dec92b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1467,11 +1471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6788866120125505432, guid: 49ab526f0f2cc8b4dbed7f370ac10561, type: 3}
       propertyPath: MinSpawned
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6788866120125505432, guid: 49ab526f0f2cc8b4dbed7f370ac10561, type: 3}
       propertyPath: MaxSpawnTime
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8209514656712808483, guid: 49ab526f0f2cc8b4dbed7f370ac10561, type: 3}
       propertyPath: Spawnables.Array.data[0]

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1312013959}
   - component: {fileID: 1312013958}
   - component: {fileID: 1312013957}
-  - component: {fileID: 1312013956}
   - component: {fileID: 1312013955}
   m_Layer: 0
   m_Name: Weapon
@@ -28,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312013953}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.068, z: 0.023}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: 0.000000058207654, y: -0.00000014330725, z: 0.00000005625747, w: 1}
+  m_LocalPosition: {x: -0, y: 0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5451627047178245789}
@@ -64,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 05b9cf7c5cb62ce44bf20940f2e8cc1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,22 +98,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1312013956
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312013953}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1312013955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e067a8971353b54db21af52e57c1cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthDamage: 5
+  HealthDamage: 15
 --- !u!1 &106146893401575330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,7 +1594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5636939272885090686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.54, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1637,7 +1620,7 @@ MonoBehaviour:
   perception: {fileID: 8008301501461651368}
   Weapon: {fileID: 1312013953}
   Health: {fileID: 6944684475609833844}
-  Score: 100
+  Score: 50
   atDestination:
     value: 0
   enemySeen:
@@ -1811,8 +1794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Health
-  MaxValue: 20
-  StartValue: 20
+  MaxValue: 30
+  StartValue: 30
   DefaultRegenerationRate: 0
 --- !u!1 &5708269892951785228
 GameObject:

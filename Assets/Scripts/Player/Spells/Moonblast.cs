@@ -24,7 +24,7 @@ public class Moonblast : Spell
     {
         if (DestroyOnContact && !Owner.CompareTag(other.tag))
             Destroy(this.gameObject, .05f);
-        if (other.TryGetComponent<StateAgent>(out var Zombie))
-            SpellDamage.Trigger(Zombie);
+        //if (other.TryGetComponent<StateAgent>(out var Zombie))
+        //    SpellDamage.Trigger(Zombie);
     }
 }

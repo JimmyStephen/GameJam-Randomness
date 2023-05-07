@@ -30,6 +30,10 @@ public class Starfall : Spell
             Destroy(gameObject, .05f);
             Vector3 spawn = gameObject.transform.position;
             spawn.y -= 1f;
+
+            if (Physics.Raycast(new(transform.position, Vector3.down), out RaycastHit hit))
+                spawn = hit.point;
+
             Instantiate(OnCollisionCreation, spawn, gameObject.transform.rotation);
         }
     }

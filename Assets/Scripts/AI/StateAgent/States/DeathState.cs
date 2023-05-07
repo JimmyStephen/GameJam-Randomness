@@ -25,7 +25,6 @@ public class DeathState : State
         }
         GameManager.Instance.UpdateScore(owner.Score);
         string DeathNum = Random.Range(1, 3).ToString();
-        Debug.Log("DeathNum: " + DeathNum);
         owner.animator.SetTrigger("Dead" + DeathNum);
     }
 

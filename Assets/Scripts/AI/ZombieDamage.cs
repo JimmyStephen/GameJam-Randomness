@@ -2,17 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class ZombieDamage : MonoBehaviour
 {
     [SerializeField] float HealthDamage;
-    Rigidbody rb;
     bool isEnabled = false;
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
 
     /// <summary>
     /// Toggles if the object is enabled
@@ -20,6 +13,7 @@ public class ZombieDamage : MonoBehaviour
     /// <returns>If the object is enabled</returns>
     public bool ToggleEnabled()
     {
+        Debug.Log("Set Enabled");
         isEnabled = !isEnabled;
         gameObject.SetActive(isEnabled);
         return isEnabled;
@@ -30,14 +24,18 @@ public class ZombieDamage : MonoBehaviour
     /// </summary>
     public void SetEnabled(bool toSet)
     {
+        Debug.Log("Set Enabled");
         isEnabled = toSet;
         gameObject.SetActive(isEnabled);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision: Zombie Weapon");
-        if (other.TryGetComponent<Player>(out Player player))
+        Debug.Log("Collision Enabled: " + isEnabled);
+        if (!isEnabled)
+            return;
+
+        if (other.TryGetComponent(out KinematicCharacterController.Walkthrough.LandingLeavingGround.MyCharacterController player))
         {
             Debug.Log("Collision with player");
             player.Health.Damage(HealthDamage);

@@ -10,9 +10,8 @@ public class AttackState : State
     }
     public override void OnEnter()
     {
-        Debug.Log("Attack");
         owner.movement.Stop();
-        owner.timer.value = 1;
+        owner.timer.value = 2.7f;
         owner.animator.SetTrigger("Attack");
         owner.Weapon.GetComponent<ZombieDamage>().SetEnabled(true);
     }

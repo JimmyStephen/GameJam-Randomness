@@ -16,9 +16,15 @@ public class GravityWell : MonoBehaviour
     {
         if (other.TryGetComponent<Rigidbody>(out var rb))
         {
-            float gravityIntensity = Vector3.Distance(transform.position, other.transform.position) / m_GravityRadius;
-            other.attachedRigidbody.AddForce((transform.position - other.transform.position) * gravityIntensity * other.attachedRigidbody.mass * GRAVITY_FORCE * Time.smoothDeltaTime);
-            Debug.DrawRay(other.transform.position, transform.position - other.transform.position);
+            //float gravityIntensity = Vector3.Distance(transform.position, other.transform.position) / m_GravityRadius;
+
+            other.attachedRigidbody.MovePosition(gameObject.transform.position * GRAVITY_FORCE * Time.deltaTime);
+            //Debug.DrawRay(other.transform.position, transform.position - other.transform.position);
+
+            //Should work
+            //float gravityIntensity = Vector3.Distance(transform.position, other.transform.position) / m_GravityRadius;
+            //other.attachedRigidbody.AddForce((transform.position - other.transform.position) * gravityIntensity * other.attachedRigidbody.mass * GRAVITY_FORCE * Time.smoothDeltaTime);
+            //Debug.DrawRay(other.transform.position, transform.position - other.transform.position);
         }
     }
 }

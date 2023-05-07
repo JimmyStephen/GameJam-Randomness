@@ -226,7 +226,6 @@ GameObject:
   - component: {fileID: 854042393337421311}
   - component: {fileID: 854042393337421310}
   - component: {fileID: 854042393337421309}
-  - component: {fileID: 854042393337421308}
   - component: {fileID: 854042393337421307}
   m_Layer: 0
   m_Name: Weapon
@@ -242,13 +241,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854042393337421305}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.068, z: 0.023}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalRotation: {x: -0.65108556, y: 0.7005358, z: 0.20264639, w: 0.21040842}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4643838908961617381}
-  m_RootOrder: 4
+  m_Father: {fileID: 5888077470082673745}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &854042393337421311
 MeshFilter:
@@ -313,22 +312,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &854042393337421308
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854042393337421305}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &854042393337421307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e067a8971353b54db21af52e57c1cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthDamage: 5
+  HealthDamage: 10
 --- !u!1 &931489656773525158
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +929,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8196036299859401861}
+  - {fileID: 854042393337421306}
   m_Father: {fileID: 1568745686785492215}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1366,7 +1350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5035100727734721030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.54, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1392,7 +1376,7 @@ MonoBehaviour:
   perception: {fileID: 7275873891290627280}
   Weapon: {fileID: 854042393337421305}
   Health: {fileID: 7762607840872038924}
-  Score: 100
+  Score: 75
   atDestination:
     value: 0
   enemySeen:
@@ -1566,8 +1550,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Health
-  MaxValue: 20
-  StartValue: 20
+  MaxValue: 10
+  StartValue: 10
   DefaultRegenerationRate: 0
 --- !u!1 &5172531895696673212
 GameObject:
@@ -2915,7 +2899,6 @@ Transform:
   - {fileID: 5279794574605812293}
   - {fileID: 2831603722946063649}
   - {fileID: 3241895862233636563}
-  - {fileID: 854042393337421306}
   m_Father: {fileID: 8814891102101372805}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

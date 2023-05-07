@@ -14,18 +14,20 @@ public class PlayerDamage : MonoBehaviour
         Destroy(gameObject, Duration);
     }
 
-    public void Trigger(StateAgent Zombie)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Damage Trigger");
-        if (DOT)
+        if (other.TryGetComponent<StateAgent>(out var Zombie))
         {
-            Zombie.Health.Damage(Damage * Time.deltaTime);
-        }
-        else
-        {
-            Zombie.Health.Damage(Damage);
-            if (!MultiTarget)
-                Destroy(this);
+            if (DOT)
+            {
+                Zombie.Health.Damage(Damage * Time.deltaTime);
+            }
+            else
+            {
+                Zombie.Health.Damage(Damage);
+                if (!MultiTarget)
+                    Destroy(this);
+            }
         }
     }
 }
