@@ -21,13 +21,11 @@ public class ChaseState : State
 
     public override void OnUpdate()
     {
-        try 
+        try
         {
             owner.movement.MoveTowards(owner.enemy.transform.position);
         }
-        catch
-        {
-            Debug.Log("No Opponent Found Chase State: Enemy(" + owner.enemy + ")");
-        }
+        catch { }
+            
     }
 }
