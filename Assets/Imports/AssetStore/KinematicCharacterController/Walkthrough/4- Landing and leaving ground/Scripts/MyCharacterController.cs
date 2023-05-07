@@ -59,8 +59,10 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
         [SerializeField] List<GameObject> SpellLocations;
         
         [HideInInspector] public float animationTimer = 0;
+        [SerializeField] Animator animator;
         private Dictionary<string, float> SpellCooldowns = new();
         private List<string> keys = new();
+
 
         private void Start()
         {
@@ -77,6 +79,7 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
         {
             DecrementTimers();
             CastSpell();
+            UpdateAnimator();
             if (Health.GetCurrent() <= 0) GameManager.Instance.GameOver();
         }
         void DecrementTimers()
@@ -84,6 +87,12 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
             keys.ForEach(key => { SpellCooldowns[key] -= Time.deltaTime; });
             animationTimer -= Time.deltaTime;
         }
+        void UpdateAnimator()
+        {
+            Debug.Log("Player Speed: " + Motor.Velocity.magnitude);
+            animator.SetFloat("Speed", Motor.Velocity.magnitude);
+        }
+
         void CastSpell()
         {
             Spells.ForEach(spell => {
@@ -94,6 +103,7 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
                         if (s.CheckCanCast(Mana.GetCurrent(), SpellCooldowns[s.name], animationTimer))
                         {
                             (SpellCooldowns[s.name], animationTimer) = s.TriggerSpell(Mana, SpellCooldowns[s.name], animationTimer);
+                            animator.SetTrigger(s.name);
                             StartCoroutine(SpawnAfterDelay(this.gameObject, SpellLocations.First(sl => sl.name == s.name), spell, s.SpellDelay, true));
                         }
                     }
