@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5a9bfb42d21c0f4695250b4221b1905
+guid: 502a25f2aa8524647a403b146c469992
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -36,7 +36,7 @@ ModelImporter:
       name: Zombie Dying
       takeName: mixamo.com
       internalID: -203655887218126122
-      firstFrame: 0
+      firstFrame: 90
       lastFrame: 100
       wrapMode: 0
       orientationOffsetY: 0
