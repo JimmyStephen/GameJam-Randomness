@@ -96,6 +96,9 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
 
         void CastSpell()
         {
+            if (!Motor.GroundingStatus.IsStableOnGround)
+                return;
+
             Spells.ForEach(spell => {
                 if (spell.TryGetComponent(out Spell s))
                 {
@@ -282,7 +285,6 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
 
                         // Add to the return velocity and reset jump state
                         currentVelocity += (jumpDirection * JumpSpeed) - Vector3.Project(currentVelocity, Motor.CharacterUp);
-                        Debug.Log("JUMP!");
                         animator.SetTrigger("Jump");
                         _jumpRequested = false;
                         _jumpConsumed = true;
