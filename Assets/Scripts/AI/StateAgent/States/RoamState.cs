@@ -29,7 +29,6 @@ public class RoamState : State
     {
         if (Vector3.Distance(owner.transform.position, owner.movement.destination) <= 1.5)
 	    {
-            Debug.Log("New Roam Destination");
             OnEnter();
         }
     }

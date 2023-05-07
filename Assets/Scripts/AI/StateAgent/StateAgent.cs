@@ -58,6 +58,7 @@ public class StateAgent : Agent
 
         try
         {
+            //Debug.Log("Movement: " + movement.velocity.magnitude);
             animator.SetFloat("Speed", movement.velocity.magnitude);
         }
         catch

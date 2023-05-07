@@ -89,8 +89,8 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
         }
         void UpdateAnimator()
         {
-            Debug.Log("Player Speed: " + Motor.Velocity.magnitude);
             animator.SetFloat("Speed", Motor.Velocity.magnitude);
+            animator.SetBool("Dead", (Health.GetCurrent() <= 0));
         }
 
         void CastSpell()
@@ -281,6 +281,8 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
 
                         // Add to the return velocity and reset jump state
                         currentVelocity += (jumpDirection * JumpSpeed) - Vector3.Project(currentVelocity, Motor.CharacterUp);
+                        Debug.Log("JUMP!");
+                        animator.SetTrigger("Jump");
                         _jumpRequested = false;
                         _jumpConsumed = true;
                         _jumpedThisFrame = true;
@@ -366,12 +368,12 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
 
         protected void OnLanded()
         {
-            //Debug.Log("Landed");
+            animator.SetBool("Falling", false);
         }
 
         protected void OnLeaveStableGround()
         {
-            Debug.Log("Left ground");
+            animator.SetBool("Falling", true);
         }
 
         public void OnDiscreteCollisionDetected(Collider hitCollider)

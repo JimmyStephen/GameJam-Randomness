@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class ZombieDamage : MonoBehaviour
 {
-    [SerializeField] float speed;
     [SerializeField] float HealthDamage;
     Rigidbody rb;
     bool isEnabled = false;
@@ -37,8 +36,10 @@ public class ZombieDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collision: Zombie Weapon");
         if (other.TryGetComponent<Player>(out Player player))
         {
+            Debug.Log("Collision with player");
             player.Health.Damage(HealthDamage);
         }
     }

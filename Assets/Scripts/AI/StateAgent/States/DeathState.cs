@@ -11,7 +11,6 @@ public class DeathState : State
 
     public override void OnEnter()
     {
-        Debug.Log("Death State");
         owner.movement.Stop();
         //If less, revive
         if(Random.Range(0, 101) < owner.ReviveChance)
@@ -23,12 +22,11 @@ public class DeathState : State
         //if more dont
         else
         {
-            GameObject.Destroy(this.owner.gameObject, .05f);
+            GameObject.Destroy(this.owner.gameObject, 3);
             GameManager.Instance.UpdateTotalZombies(-1);
         }
         GameManager.Instance.UpdateScore(owner.Score);
-        owner.animator.SetTrigger("Death");
-        //GameObject.Destroy(owner.gameObject, 3);
+        owner.animator.SetTrigger("Dead");
     }
 
     public override void OnExit()
@@ -43,7 +41,7 @@ public class DeathState : State
         if (owner.timer.value <= 2 && !ReAnimated)
         {
             ReAnimated = true;
-            owner.animator.SetTrigger("ReAnimate");
+            owner.animator.SetTrigger("Revived");
         }
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: af4978e13f3346a4e97112e9d3a75cd9
+guid: f1803cdb5340f014b9e63e39343fcbfe
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -33,13 +33,13 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Standing 1H Magic Attack 01
+      name: Jump-In_Air
       takeName: mixamo.com
       internalID: -203655887218126122
-      firstFrame: 0
-      lastFrame: 69
+      firstFrame: 34
+      lastFrame: 44
       wrapMode: 0
-      orientationOffsetY: -65
+      orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
@@ -50,9 +50,9 @@ ModelImporter:
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
-      keepOriginalPositionY: 0
+      keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
-      heightFromFeet: 1
+      heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []

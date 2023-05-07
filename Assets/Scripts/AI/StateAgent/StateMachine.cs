@@ -34,7 +34,6 @@ public class StateMachine
         currentState?.OnExit();
         currentState = newState;
         newState.OnEnter();
-        Debug.Log("State Change, new State: " + newState.name);
     }
 
     public void AddState(State state)
