@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 695358876897207355}
-  animator: {fileID: 0}
+  animator: {fileID: 7245947575333964381}
   perception: {fileID: 6473823663004712617}
   Weapon: {fileID: 3959956665364848512}
   Health: {fileID: 6238873235603341429}
@@ -502,5 +502,10 @@ Transform:
 --- !u!4 &7206455181223559844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3321919801592875672, guid: 7b7d200b67eb391499acb82dba1c5647, type: 3}
+  m_PrefabInstance: {fileID: 3883320330812585932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7245947575333964381 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7b7d200b67eb391499acb82dba1c5647, type: 3}
   m_PrefabInstance: {fileID: 3883320330812585932}
   m_PrefabAsset: {fileID: 0}
