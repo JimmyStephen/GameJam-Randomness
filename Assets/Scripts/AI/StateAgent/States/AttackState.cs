@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class AttackState : State
 {
@@ -23,5 +24,17 @@ public class AttackState : State
 
     public override void OnUpdate()
     {
+        //Face target
+        try
+        {
+            var lookPos = owner.enemy.transform.position - owner.transform.position;
+            lookPos.y = 0;
+            var rotation = Quaternion.LookRotation(lookPos);
+            owner.transform.rotation = Quaternion.Slerp(owner.transform.rotation, rotation, Time.deltaTime * 2);
+        }
+        catch
+        {
+            Debug.Log("Exception - Target not found");
+        }
     }
 }

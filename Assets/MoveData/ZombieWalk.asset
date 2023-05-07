@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0ee01a69b9bf41908e3d208f66ac8, type: 3}
   m_Name: ZombieWalk
   m_EditorClassIdentifier: 
-  maxSpeed: 1
-  minSpeed: 1
+  maxSpeed: 0.75
+  minSpeed: 0.75
   maxForce: 5
   turnRate: 270
   orientToMovement: 1

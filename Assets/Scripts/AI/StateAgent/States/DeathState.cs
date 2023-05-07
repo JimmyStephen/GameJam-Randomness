@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DeathState : State
 {
+    bool ReAnimated;
+    bool Revive = true;
     public DeathState(StateAgent owner, string name) : base(owner, name)
     {
 
@@ -12,9 +14,9 @@ public class DeathState : State
     public override void OnEnter()
     {
         owner.movement.Stop();
+        ReAnimated = false;
         if(Random.Range(0, 101) < owner.ReviveChance)
         {
-            ReAnimated = false;
             owner.timer.value = Random.Range(4, 8);
             owner.ReviveChance -= Random.Range(10, 26);
         }
@@ -22,6 +24,7 @@ public class DeathState : State
         {
             GameObject.Destroy(this.owner.gameObject, 3);
             GameManager.Instance.UpdateTotalZombies(-1);
+            Revive = false;
         }
         GameManager.Instance.UpdateScore(owner.Score);
         string DeathNum = Random.Range(1, 3).ToString();
@@ -34,10 +37,9 @@ public class DeathState : State
         owner.Health.Heal(100);
     }
 
-    bool ReAnimated = false;
     public override void OnUpdate()
     {
-        if (owner.timer.value <= 2 && !ReAnimated)
+        if (owner.timer.value <= 0 && !ReAnimated && Revive)
         {
             ReAnimated = true;
             owner.animator.SetTrigger("Revived");

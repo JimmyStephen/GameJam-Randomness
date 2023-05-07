@@ -1181,8 +1181,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214972857717495406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0.25}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.85, z: 0.05}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5749974474909779433}
@@ -1203,7 +1203,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214972857717495406}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1749,10 +1749,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Player
-  distance: 8
-  angle: 80
+  distance: 12
+  angle: 180
   raycastTransform: {fileID: 7938103953687566171}
-  numRaycast: 30
+  numRaycast: 50
   radius: 0.5
 --- !u!114 &8910956257013236784
 MonoBehaviour:

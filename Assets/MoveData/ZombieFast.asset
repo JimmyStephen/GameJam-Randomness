@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0ee01a69b9bf41908e3d208f66ac8, type: 3}
   m_Name: ZombieFast
   m_EditorClassIdentifier: 
-  maxSpeed: 12
-  minSpeed: 6
+  maxSpeed: 5
+  minSpeed: 5
   maxForce: 8
   turnRate: 360
   orientToMovement: 1

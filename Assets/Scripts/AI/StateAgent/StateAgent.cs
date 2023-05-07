@@ -55,14 +55,6 @@ public class StateAgent : Agent
         enemyDistance.value = (enemy != null) ? (Vector3.Distance(transform.position, enemy.transform.position)) : float.MaxValue;
 
         stateMachine.Update();
-
-        try
-        {
-            animator.SetFloat("Speed", movement.velocity.magnitude);
-        }
-        catch
-        {
-            Debug.Log("Animator Error (Speed)");
-        }
+        animator.SetFloat("Speed", movement.velocity.magnitude);
     }
 }

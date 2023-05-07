@@ -2305,6 +2305,7 @@ MonoBehaviour:
   - {fileID: 7641555320313567788}
   - {fileID: 7641555321253227634}
   - {fileID: 7641555319795039803}
+  SprintSpeed: 2
   animationTimer: 0
   animator: {fileID: 5866666021262764827}
 --- !u!114 &4088558860487779240

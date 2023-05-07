@@ -91,7 +91,7 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
         }
         void UpdateAnimator()
         {
-            Debug.Log("Speed: " + Motor.Velocity.magnitude);
+            //Debug.Log("Speed: " + Motor.Velocity.magnitude);
             animator.SetFloat("Speed", Motor.Velocity.magnitude);
             animator.SetBool("Dead", (Health.GetCurrent() <= 0));
         }
