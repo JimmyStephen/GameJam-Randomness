@@ -717,6 +717,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4562989393944495418, guid: adbce938a13fa9c4783a9b6605bf768c, type: 3}
+      propertyPath: movementData
+      value: 
+      objectReference: {fileID: 11400000, guid: 849d6d44f7df45846806c8f5a41ef433, type: 2}
     - target: {fileID: 5636939272885090686, guid: adbce938a13fa9c4783a9b6605bf768c, type: 3}
       propertyPath: m_Name
       value: ZombieGirl-Walk
@@ -1387,6 +1391,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2521617712761622747, guid: 32ab55dde38167547a35588255d3e364, type: 3}
+      propertyPath: movementData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c96942c6b05b994aaec9c4c5f5e2957, type: 2}
     - target: {fileID: 5749974474909779433, guid: 32ab55dde38167547a35588255d3e364, type: 3}
       propertyPath: m_RootOrder
       value: 5
