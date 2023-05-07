@@ -125,8 +125,8 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
                 if (Key == spell.name)
                 {
                     float cd;
-                    cd = SpellCooldowns[Key] >= 0 ? SpellCooldowns[Key] : 0;
-                    return cd / spell.GetCooldown();
+                    cd = SpellCooldowns[Key] > 0 ? SpellCooldowns[Key] : 0;
+                    return (spell.GetCooldown() - cd) / spell.GetCooldown();
                     
                 }
             }
