@@ -21,15 +21,15 @@ public class UIManager : MonoBehaviour
         ManaSlider.value = GameManager.Instance.Player.Mana.GetCurrent() / GameManager.Instance.Player.Mana.GetMax() * 100;
 
         var newColor = MoonblastCD.color;
-        newColor.a = 255 - GameManager.Instance.Player.GetCooldownPercent("Moonblast") * 255;
+        newColor.a = GameManager.Instance.Player.GetCooldownPercent("Moonblast");
         MoonblastCD.color = newColor;
 
         newColor = StarfallCD.color;
-        newColor.a = 255 - GameManager.Instance.Player.GetCooldownPercent("Starfall") * 255;
+        newColor.a = GameManager.Instance.Player.GetCooldownPercent("Starfall");
         StarfallCD.color = newColor;
 
         newColor = BlackholeCD.color;
-        newColor.a = 255 - GameManager.Instance.Player.GetCooldownPercent("Blackhole") * 255;
+        newColor.a = GameManager.Instance.Player.GetCooldownPercent("Blackhole");
         BlackholeCD.color = newColor;
     }
 }
