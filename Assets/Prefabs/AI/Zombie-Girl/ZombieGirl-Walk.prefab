@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb328016ba56164f8e550cb8bb0501e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementData: {fileID: 11400000, guid: 849d6d44f7df45846806c8f5a41ef433, type: 2}
+  movementData: {fileID: 11400000, guid: 6c96942c6b05b994aaec9c4c5f5e2957, type: 2}
   navMeshAgent: {fileID: 5260651809086676802}
 --- !u!114 &8008301501461651368
 MonoBehaviour:
