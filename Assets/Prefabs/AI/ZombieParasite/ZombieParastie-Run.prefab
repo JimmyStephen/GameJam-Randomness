@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 2057764601080040866}
   - component: {fileID: 695358876897207355}
   - component: {fileID: 6473823663004712617}
-  - component: {fileID: 5832987547448619216}
   - component: {fileID: 9220277366026157635}
   - component: {fileID: 2576903037954439177}
   - component: {fileID: 1885960683867020236}
@@ -311,21 +310,6 @@ MonoBehaviour:
   raycastTransform: {fileID: 5003837530933158843}
   numRaycast: 30
   radius: 0.5
---- !u!114 &5832987547448619216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8705169991956371583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3780272ab5ae6744bb0db4757c2ae3b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: None
-  distance: 0
-  damage: 0
 --- !u!195 &9220277366026157635
 NavMeshAgent:
   m_ObjectHideFlags: 0

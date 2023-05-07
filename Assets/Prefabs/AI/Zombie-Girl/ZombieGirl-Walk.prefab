@@ -59,5 +59,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieGirl-Walk
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5832987547448619216, guid: 7e98ecfa619c20a4d8eaee72483c8314, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e98ecfa619c20a4d8eaee72483c8314, type: 3}
