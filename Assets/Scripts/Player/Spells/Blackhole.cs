@@ -5,6 +5,8 @@ using UnityEngine;
 public class Blackhole : Spell
 {
     [SerializeField] float ExpansionRate = 2.5f;
+    [SerializeField] GameObject createOnDestroy;
+
 
     private void Start()
     {
@@ -16,12 +18,15 @@ public class Blackhole : Spell
         gameObject.transform.localScale += ExpansionRate * Time.deltaTime * Vector3.one;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (DestroyOnContact && !Owner.CompareTag(other.tag))
-            Destroy(this.gameObject, .05f);
 
+    private void OnTriggerStay(Collider other)
+    {
         if (other.TryGetComponent<StateAgent>(out var Zombie))
             SpellDamage.Trigger(Zombie);
+    }
+
+    private void OnDestroy()
+    {
+        //Instantiate(createOnDestroy, gameObject.transform.position, gameObject.transform.rotation);
     }
 }

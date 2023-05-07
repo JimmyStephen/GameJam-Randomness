@@ -59,6 +59,7 @@ MonoBehaviour:
   perception: {fileID: 2818337635413860040}
   Weapon: {fileID: 0}
   Health: {fileID: 6578634461030352086}
+  Score: 100
   atDestination:
     value: 0
   enemySeen:
@@ -69,6 +70,7 @@ MonoBehaviour:
     value: 0
   timer:
     value: 0
+  ReviveChance: 100
 --- !u!114 &8605660086821684314
 MonoBehaviour:
   m_ObjectHideFlags: 0

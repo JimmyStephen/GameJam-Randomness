@@ -45,7 +45,7 @@ public class ObjectMoveDestroy : MonoBehaviour
             if (Time.time > time + ObjectDestroyTime)
             {
                 MakeHitObject(transform);
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
     }
@@ -85,8 +85,8 @@ public class ObjectMoveDestroy : MonoBehaviour
                 m_sc.AddHitObject(hit.point);
         }
 
-        Destroy(this.gameObject);
-        Destroy(m_gameObjectTail, TailDestroyTime);
-        Destroy(m_makedObject, HitObjectDestroyTime);
+        //Destroy(this.gameObject);
+        //Destroy(m_gameObjectTail, TailDestroyTime);
+        //Destroy(m_makedObject, HitObjectDestroyTime);
     }
 }

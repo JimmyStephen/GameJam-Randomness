@@ -81,6 +81,7 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
             CastSpell();
             UpdateAnimator();
             if (Health.GetCurrent() <= 0) GameManager.Instance.GameOver();
+            GameManager.Instance.UpdatePlayerData(Health.GetCurrent(), Mana.GetCurrent());
         }
         void DecrementTimers()
         {

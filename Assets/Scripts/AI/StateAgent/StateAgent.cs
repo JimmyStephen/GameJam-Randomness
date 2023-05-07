@@ -58,12 +58,11 @@ public class StateAgent : Agent
 
         try
         {
-            //Debug.Log("Movement: " + movement.velocity.magnitude);
             animator.SetFloat("Speed", movement.velocity.magnitude);
         }
         catch
         {
-            Debug.Log("Animator Error");
+            Debug.Log("Animator Error (Speed)");
         }
     }
 }
