@@ -17,7 +17,7 @@ public class DeathState : State
         ReAnimating = false;
         if(Random.Range(0, 101) < owner.ReviveChance)
         {
-            owner.timer.value = Random.Range(6, 10);
+            owner.timer.value = Random.Range(10, 15);
             owner.ReviveChance -= Random.Range(10, 26);
             ShouldRevive = true;
         }
