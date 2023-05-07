@@ -75,6 +75,7 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
             });
 
             GameManager.Instance.StartGame();
+            GameManager.Instance.Player = this;
         }
         void Update()
         {
@@ -82,7 +83,6 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
             CastSpell();
             UpdateAnimator();
             if (Health.GetCurrent() <= 0) GameManager.Instance.GameOver();
-            GameManager.Instance.UpdatePlayerData(Health.GetCurrent(), Mana.GetCurrent());
         }
         void DecrementTimers()
         {
@@ -115,6 +115,22 @@ namespace KinematicCharacterController.Walkthrough.LandingLeavingGround
                     }
                 }
             });
+        }
+
+        public float GetCooldownPercent(string Key)
+        {
+            for(int i = 0; i < SpellCooldowns.Count; i++)
+            {
+                Spell spell = Spells[i].GetComponent<Spell>();
+                if (Key == spell.name)
+                {
+                    float cd;
+                    cd = SpellCooldowns[Key] >= 0 ? SpellCooldowns[Key] : 0;
+                    return cd / spell.GetCooldown();
+                    
+                }
+            }
+            return -1;
         }
 
         /// <summary>

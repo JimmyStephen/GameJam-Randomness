@@ -6,8 +6,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public int Score { get; private set; }
-    public float PlayerHealth { get; private set; }
-    public float PlayerMana { get; private set; }
+    public KinematicCharacterController.Walkthrough.LandingLeavingGround.MyCharacterController Player;
 
     public int TotalZombies { get; private set; }
     [SerializeField] int MaxZombies = 100;
@@ -22,11 +21,6 @@ public class GameManager : Singleton<GameManager>
         Debug.Log("Game Over Called | Not Implemented");
     }
 
-    public void UpdatePlayerData(float Health, float Mana)
-    {
-        PlayerHealth = Health;
-        PlayerMana = Mana;
-    }
     public void UpdateScore(int Update)
     {
         Score += Update;

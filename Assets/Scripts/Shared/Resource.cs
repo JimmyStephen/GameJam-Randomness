@@ -80,4 +80,13 @@ public class Resource : MonoBehaviour
     {
         return currentValue <= 0;
     }
+
+    /// <summary>
+    /// Gets the max value
+    /// </summary>
+    /// <returns></returns>
+    public float GetMax()
+    {
+        return MaxValue;
+    }
 }

@@ -39,7 +39,7 @@ public class StateAgent : Agent
         stateMachine.AddTransition(typeof(RoamState).Name, new Transition(new Condition[] { new FloatCondition(health, Condition.Predicate.LESS_EQUAL, 0) }), typeof(DeathState).Name);
 
         //to Attack State : If enemy seen and in range
-        stateMachine.AddTransition(typeof(ChaseState).Name, new Transition(new Condition[] { new FloatCondition(enemyDistance, Condition.Predicate.LESS_EQUAL, 1.5f) }), typeof(AttackState).Name);
+        stateMachine.AddTransition(typeof(ChaseState).Name, new Transition(new Condition[] { new FloatCondition(enemyDistance, Condition.Predicate.LESS_EQUAL, 2f) }), typeof(AttackState).Name);
 
         stateMachine.setState(stateMachine.StateFromName(typeof(RoamState).Name));
     }

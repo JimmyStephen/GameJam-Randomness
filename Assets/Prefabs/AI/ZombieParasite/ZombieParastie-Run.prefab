@@ -266,7 +266,7 @@ MonoBehaviour:
   perception: {fileID: 6473823663004712617}
   Weapon: {fileID: 3959956665364848512}
   Health: {fileID: 6238873235603341429}
-  Score: 50
+  Score: 125
   atDestination:
     value: 0
   enemySeen:
@@ -425,8 +425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Health
-  MaxValue: 30
-  StartValue: 30
+  MaxValue: 20
+  StartValue: 20
   DefaultRegenerationRate: 0
 --- !u!1001 &3883320330812585932
 PrefabInstance:

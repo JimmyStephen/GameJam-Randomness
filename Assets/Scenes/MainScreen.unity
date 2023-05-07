@@ -583,6 +583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015f39bcd4299394e8ac411e980d2f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   MaxZombies: 100
 --- !u!4 &813464400
 Transform:

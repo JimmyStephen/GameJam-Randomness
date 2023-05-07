@@ -37,4 +37,9 @@ public abstract class Spell : MonoBehaviour
             return (CurrentCooldown, CurrentAnimationDuration);
         }
     }
+
+    public float GetCooldown()
+    {
+        return SpellCooldown;
+    }
 }
