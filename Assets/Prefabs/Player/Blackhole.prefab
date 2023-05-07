@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27f2d4a2a471384f91ea2b5063b3453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 15
+  Damage: 30
   MultiTarget: 1
   DOT: 1
   Duration: 1000

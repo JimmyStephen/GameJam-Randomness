@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : Singleton<SceneLoader>
 {
     //Scenes
+        //0 - Title
+        //1 - Game
+        //2 - How-To
+        //3 - Credits
+
     [SerializeField] Animator transition;
     [SerializeField] float transitionTime;
-
+    
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
@@ -19,6 +24,8 @@ public class SceneLoader : Singleton<SceneLoader>
         StartCoroutine(LoadLevel(sceneNum));
     }
 
+    public 
+
     bool loading = false;
     IEnumerator LoadLevel(int levelIndex)
     {
@@ -26,7 +33,7 @@ public class SceneLoader : Singleton<SceneLoader>
         {
             loading = true;
             //play animation
-            transition.SetTrigger("Start");
+            //transition.SetTrigger("Start");
             //wait for animation to end
             yield return new WaitForSeconds(transitionTime);
             //load scene

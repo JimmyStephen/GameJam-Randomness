@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] TMPro.TMP_Text ScoreUI;
-    [SerializeField] TMPro.TMP_Text HealthUI;
-    [SerializeField] TMPro.TMP_Text ManaUI;
+    [SerializeField] TMP_Text ScoreUI;
+    [SerializeField] TMP_Text HealthUI;
+    [SerializeField] TMP_Text ManaUI;
 
     void Update()
     {
         ScoreUI.text    = "Score: "  + GameManager.Instance.Score.ToString();
-        HealthUI.text   = "Health: " + GameManager.Instance.PlayerHealth.ToString();
-        ManaUI.text     = "Mana: "   + GameManager.Instance.PlayerMana.ToString();
+        HealthUI.text   = "Health: " + GameManager.Instance.PlayerHealth.ToString("0.##");
+        ManaUI.text     = "Mana: "   + GameManager.Instance.PlayerMana.ToString("0.##");
     }
 }
