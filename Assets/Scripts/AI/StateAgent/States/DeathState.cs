@@ -43,6 +43,7 @@ public class DeathState : State
         if (owner.timer.value <= 0 + 3.5 && !ReAnimating && ShouldRevive)
         {
             ReAnimating = true;
+            owner.animator.SetTrigger("Revived");
         }
     }
 }
