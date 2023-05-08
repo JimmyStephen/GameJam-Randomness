@@ -261,11 +261,11 @@ RectTransform:
   m_Father: {fileID: 3085860636481138068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 100, y: -20}
   m_SizeDelta: {x: 350, y: 50}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &793477340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 317f71a4c90479d489fc85f726d915ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0beadd16effb047418e4083c005d2232, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1578,10 +1578,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreUI: {fileID: 793477339}
-  HealthUI: {fileID: 3393754540742033377}
-  ManaUI: {fileID: 3393754540726266735}
   HealthSlider: {fileID: 991240516}
   ManaSlider: {fileID: 861057398}
+  MoonblastCD: {fileID: 0}
+  StarfallCD: {fileID: 0}
+  BlackholeCD: {fileID: 0}
 --- !u!1 &3393754540864213110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9f8961936df79c14e94c4cd1a5bfa090, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
