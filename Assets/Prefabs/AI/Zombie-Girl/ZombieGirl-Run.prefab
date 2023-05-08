@@ -1173,7 +1173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7938103953687566171
 Transform:
   m_ObjectHideFlags: 0
@@ -1204,7 +1204,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214972857717495406}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1871,6 +1871,7 @@ MonoBehaviour:
   MaxValue: 20
   StartValue: 20
   DefaultRegenerationRate: 0
+  MinZero: 1
 --- !u!1 &6226377458290704091
 GameObject:
   m_ObjectHideFlags: 0

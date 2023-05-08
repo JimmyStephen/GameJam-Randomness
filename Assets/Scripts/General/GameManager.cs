@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     public int Score { get; private set; }
-    public KinematicCharacterController.Walkthrough.LandingLeavingGround.MyCharacterController Player;
+    [HideInInspector] public KinematicCharacterController.Walkthrough.LandingLeavingGround.MyCharacterController Player;
 
     public int TotalZombies { get; private set; }
     [SerializeField] int MaxZombies = 100;
@@ -14,11 +14,13 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
-        Debug.Log("Start Game Called | Not Implemented");
+        //Debug.Log("Start Game Called | Not Implemented");
+        Pause.Instance.paused = false;
+        Score= 0;
     }
     public void GameOver()
     {
-        Debug.Log("Game Over Called | Not Implemented");
+        //Debug.Log("Game Over Called | Not Implemented");
     }
 
     public void UpdateScore(int Update)

@@ -14,7 +14,7 @@ public class PlayerDamage : MonoBehaviour
         Destroy(gameObject, Duration);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent<StateAgent>(out var Zombie))
         {

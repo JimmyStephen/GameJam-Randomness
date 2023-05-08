@@ -16,20 +16,23 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        ScoreUI.text    = "Score: "  + GameManager.Instance.Score.ToString();
-        HealthSlider.value = GameManager.Instance.Player.Health.GetCurrent() / GameManager.Instance.Player.Health.GetMax() * 100;
-        ManaSlider.value = GameManager.Instance.Player.Mana.GetCurrent() / GameManager.Instance.Player.Mana.GetMax() * 100;
+        if(GameManager.Instance.Player != null)
+        {
+            ScoreUI.text = "Score: " + GameManager.Instance.Score.ToString();
+            HealthSlider.value = GameManager.Instance.Player.Health.GetCurrent() / GameManager.Instance.Player.Health.GetMax() * 100;
+            ManaSlider.value = GameManager.Instance.Player.Mana.GetCurrent() / GameManager.Instance.Player.Mana.GetMax() * 100;
 
-        var newColor = MoonblastCD.color;
-        newColor.a = GameManager.Instance.Player.GetCooldownPercent("Moonblast");
-        MoonblastCD.color = newColor;
+            var newColor = MoonblastCD.color;
+            newColor.a = GameManager.Instance.Player.GetCooldownPercent("Moonblast");
+            MoonblastCD.color = newColor;
 
-        newColor = StarfallCD.color;
-        newColor.a = GameManager.Instance.Player.GetCooldownPercent("Starfall");
-        StarfallCD.color = newColor;
+            newColor = StarfallCD.color;
+            newColor.a = GameManager.Instance.Player.GetCooldownPercent("Starfall");
+            StarfallCD.color = newColor;
 
-        newColor = BlackholeCD.color;
-        newColor.a = GameManager.Instance.Player.GetCooldownPercent("Blackhole");
-        BlackholeCD.color = newColor;
+            newColor = BlackholeCD.color;
+            newColor.a = GameManager.Instance.Player.GetCooldownPercent("Blackhole");
+            BlackholeCD.color = newColor;
+        }
     }
 }

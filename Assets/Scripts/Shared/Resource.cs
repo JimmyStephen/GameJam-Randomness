@@ -11,6 +11,7 @@ public class Resource : MonoBehaviour
     [SerializeField] float MaxValue;
     [SerializeField] float StartValue;
     [SerializeField] float DefaultRegenerationRate;
+    [SerializeField] bool MinZero = true;
 
     private float currentValue;
     private float currentRegenerationRate;
@@ -50,7 +51,7 @@ public class Resource : MonoBehaviour
     public void Damage(float amount)
     {
         currentValue -= amount;
-        if (currentValue < 0) currentValue = 0;
+        if (MinZero && currentValue < 0) currentValue = 0;
     }
     
     /// <summary>

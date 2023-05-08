@@ -13,6 +13,8 @@ public class SpawnerHub : MonoBehaviour
 
     [SerializeField, Tooltip("How much the players score effects the spawn rates and spawn numbers")] float ScoreEvolutionRate = .02f;
 
+    [SerializeField] int OnStartSpawnTimes = 10;
+
     private float Timer = 0;
 
     void Update()

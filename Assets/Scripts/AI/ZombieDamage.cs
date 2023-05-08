@@ -6,6 +6,13 @@ public class ZombieDamage : MonoBehaviour
 {
     [SerializeField] float HealthDamage;
     bool isEnabled = false;
+    private float timer = 0;
+    private readonly int CD = 2;
+
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+    }
 
     /// <summary>
     /// Toggles if the object is enabled
@@ -29,12 +36,13 @@ public class ZombieDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isEnabled)
+        if (!isEnabled || timer >= 0)
             return;
 
         if (other.TryGetComponent(out KinematicCharacterController.Walkthrough.LandingLeavingGround.MyCharacterController player))
         {
             player.Health.Damage(HealthDamage);
+            timer = CD;
         }
     }
 }
